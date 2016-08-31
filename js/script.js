@@ -1,16 +1,16 @@
 (function($) {
-	
+
 	"use strict";
-	
-	
+
+
 	//Hide Loading Box (Preloader)
 	function handlePreloader() {
 		if($('.preloader').length){
 			$('.preloader').delay(200).fadeOut(500);
 		}
 	}
-	
-	
+
+
 	//Update Scroll to Top
 	function headerStyle() {
 		if($('.main-header').length){
@@ -25,193 +25,38 @@
 			}
 		}
 	}
-	
+
 	headerStyle();
-	
-	
+
+
 	//Submenu Dropdown Toggle
 	if($('.main-header li.dropdown ul').length){
 		$('.main-header li.dropdown').append('<div class="dropdown-btn"></div>');
-		
+
 		//Dropdown Button
 		$('.main-header li.dropdown .dropdown-btn').on('click', function() {
 			$(this).prev('ul').slideToggle(500);
 		});
 	}
-	
-	
+
+
 	//Search Popup / Hide Show
 	if($('#search-popup').length){
-		
+
 		//Show Popup
 		$('.search-box-btn').on('click', function(e) {
 			e.preventDefault();
 			$('#search-popup').addClass('popup-visible');
 		});
-		
+
 		//Hide Popup
 		$('.close-search').on('click', function() {
 			$('#search-popup').removeClass('popup-visible');
 		});
 	}
 	
-	
-	//Revolution Slider Style One
-	if($('.main-slider.style-one .tp-banner').length){
 
-		jQuery('.main-slider.style-one .tp-banner').show().revolution({
-		  delay:10000,
-		  startwidth:1200,
-		  startheight:580,
-		  hideThumbs:600,
-	
-		  thumbWidth:80,
-		  thumbHeight:50,
-		  thumbAmount:5,
-	
-		  navigationType:"bullet",
-		  navigationArrows:"0",
-		  navigationStyle:"preview3",
-	
-		  touchenabled:"on",
-		  onHoverStop:"off",
-	
-		  swipe_velocity: 0.7,
-		  swipe_min_touches: 1,
-		  swipe_max_touches: 1,
-		  drag_block_vertical: false,
-	
-		  parallax:"mouse",
-		  parallaxBgFreeze:"on",
-		  parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
-	
-		  keyboardNavigation:"off",
-	
-		  navigationHAlign:"center",
-		  navigationVAlign:"bottom",
-		  navigationHOffset:0,
-		  navigationVOffset:20,
-	
-		  soloArrowLeftHalign:"left",
-		  soloArrowLeftValign:"center",
-		  soloArrowLeftHOffset:20,
-		  soloArrowLeftVOffset:0,
-	
-		  soloArrowRightHalign:"right",
-		  soloArrowRightValign:"center",
-		  soloArrowRightHOffset:20,
-		  soloArrowRightVOffset:0,
-	
-		  shadow:0,
-		  fullWidth:"on",
-		  fullScreen:"off",
-	
-		  spinner:"spinner4",
-	
-		  stopLoop:"off",
-		  stopAfterLoops:-1,
-		  stopAtSlide:-1,
-	
-		  shuffle:"off",
-	
-		  autoHeight:"off",
-		  forceFullWidth:"on",
-	
-		  hideThumbsOnMobile:"on",
-		  hideNavDelayOnMobile:1500,
-		  hideBulletsOnMobile:"on",
-		  hideArrowsOnMobile:"on",
-		  hideThumbsUnderResolution:0,
-	
-		  hideSliderAtLimit:0,
-		  hideCaptionAtLimit:0,
-		  hideAllCaptionAtLilmit:0,
-		  startWithSlide:0,
-		  videoJsPath:"",
-		  fullScreenOffsetContainer: ""
-	  });
-		
-	}
-	
-	
-	//Revolution Slider Style Two
-	if($('.main-slider.style-two .tp-banner').length){
 
-		jQuery('.main-slider.style-two .tp-banner').show().revolution({
-		  delay:10000,
-		  startwidth:1200,
-		  startheight:740,
-		  hideThumbs:600,
-	
-		  thumbWidth:80,
-		  thumbHeight:50,
-		  thumbAmount:5,
-	
-		  navigationType:"bullet",
-		  navigationArrows:"0",
-		  navigationStyle:"preview4",
-	
-		  touchenabled:"on",
-		  onHoverStop:"off",
-	
-		  swipe_velocity: 0.7,
-		  swipe_min_touches: 1,
-		  swipe_max_touches: 1,
-		  drag_block_vertical: false,
-	
-		  parallax:"mouse",
-		  parallaxBgFreeze:"on",
-		  parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
-	
-		  keyboardNavigation:"off",
-	
-		  navigationHAlign:"center",
-		  navigationVAlign:"bottom",
-		  navigationHOffset:0,
-		  navigationVOffset:25,
-	
-		  soloArrowLeftHalign:"left",
-		  soloArrowLeftValign:"center",
-		  soloArrowLeftHOffset:20,
-		  soloArrowLeftVOffset:0,
-	
-		  soloArrowRightHalign:"right",
-		  soloArrowRightValign:"center",
-		  soloArrowRightHOffset:20,
-		  soloArrowRightVOffset:0,
-	
-		  shadow:0,
-		  fullWidth:"on",
-		  fullScreen:"off",
-	
-		  spinner:"spinner4",
-	
-		  stopLoop:"off",
-		  stopAfterLoops:-1,
-		  stopAtSlide:-1,
-	
-		  shuffle:"off",
-	
-		  autoHeight:"off",
-		  forceFullWidth:"on",
-	
-		  hideThumbsOnMobile:"on",
-		  hideNavDelayOnMobile:1500,
-		  hideBulletsOnMobile:"on",
-		  hideArrowsOnMobile:"on",
-		  hideThumbsUnderResolution:0,
-	
-		  hideSliderAtLimit:0,
-		  hideCaptionAtLimit:0,
-		  hideAllCaptionAtLilmit:0,
-		  startWithSlide:0,
-		  videoJsPath:"",
-		  fullScreenOffsetContainer: ""
-	  });
-		
-	}
-	
-	
 	//Latest Works Carousel
 	if ($('.work-carousel').length) {
 		$('.work-carousel').owlCarousel({
@@ -244,11 +89,11 @@
 					items:5
 				}
 			}
-		});    		
+		});
 	}
-	
-	
-	
+
+
+
 	//Testimonials Carousel
 	if ($('.testimonials-carousel').length) {
 		$('.testimonials-carousel').owlCarousel({
@@ -272,10 +117,10 @@
 					items:2
 				}
 			}
-		});    		
+		});
 	}
-	
-	
+
+
 	//Sponsors Carousel
 	if ($('.sponsors-carousel').length) {
 		$('.sponsors-carousel').owlCarousel({
@@ -302,19 +147,19 @@
 					items:6
 				}
 			}
-		});    		
+		});
 	}
-	
-	
+
+
 	// Fact Counter
 	function factCounter() {
 		if($('.fact-counter').length){
 			$('.fact-counter .counter-column.animated').each(function() {
-		
+
 				var $t = $(this),
 					n = $t.find(".count-text").attr("data-stop"),
 					r = parseInt($t.find(".count-text").attr("data-speed"), 10);
-					
+
 				if (!$t.hasClass("counted")) {
 					$t.addClass("counted");
 					$({
@@ -332,15 +177,15 @@
 						}
 					});
 				}
-				
+
 			});
 		}
 	}
-	
-	
+
+
 	//Tabs / Jquery Tabs
 	if($('.tabs-box').length){
-		
+
 		//Tabs
 		$('.tabs-box .tab-buttons .tab-btn').on('click', function(e) {
 			e.preventDefault();
@@ -358,10 +203,10 @@
 				 }, 1000);
 			}
 		});
-		
+
 	}
-	
-	
+
+
 	//LightBox / Fancybox
 	if($('.lightbox-image').length) {
 		$('.lightbox-image').fancybox({
@@ -372,35 +217,35 @@
 			}
 		});
 	}
-	
-	
+
+
 	//Sortable Masonary with Filters
 	function enableMasonry() {
 		if($('.sortable-masonry').length){
-	
+
 			var winDow = $(window);
 			// Needed variables
 			var $container=$('.sortable-masonry .items-container');
 			var $filter=$('.filter-btns');
-	
+
 			$container.isotope({
 				filter:'*',
 				 masonry: {
-					columnWidth : 1 
+					columnWidth : 1
 				 },
 				animationOptions:{
 					duration:500,
 					easing:'linear'
 				}
 			});
-			
-	
-			// Isotope Filter 
+
+
+			// Isotope Filter
 			$filter.find('li').on('click', function(){
 				var selector = $(this).attr('data-filter');
-	
+
 				try {
-					$container.isotope({ 
+					$container.isotope({
 						filter	: selector,
 						animationOptions: {
 							duration: 500,
@@ -409,16 +254,16 @@
 						}
 					});
 				} catch(err) {
-	
+
 				}
 				return false;
 			});
-	
-	
+
+
 			winDow.bind('resize', function(){
 				var selector = $filter.find('li.active').attr('data-filter');
 
-				$container.isotope({ 
+				$container.isotope({
 					filter	: selector,
 					animationOptions: {
 						duration: 500,
@@ -427,10 +272,10 @@
 					}
 				});
 			});
-	
-	
+
+
 			var filterItemA	= $('.filter-btns li');
-	
+
 			filterItemA.on('click', function(){
 				var $this = $(this);
 				if ( !$this.hasClass('active')) {
@@ -440,10 +285,10 @@
 			});
 		}
 	}
-	
+
 	enableMasonry();
-	
-	
+
+
 	//Contact Form Validation
 	if($('#contact-form').length){
 		$('#contact-form').validate({
@@ -467,8 +312,8 @@
 			}
 		});
 	}
-	
-	
+
+
 	// Scroll to a Specific Div
 	if($('.scroll-to-target').length){
 		$(".scroll-to-target").on('click', function() {
@@ -477,11 +322,11 @@
 		   $('html, body').animate({
 			   scrollTop: $(target).offset().top
 			 }, 1000);
-	
+
 		});
 	}
-	
-	
+
+
 	// Elements Animation
 	if($('.wow').length){
 		var wow = new WOW(
@@ -499,30 +344,30 @@
 /* ==========================================================================
    When document is Ready, do
    ========================================================================== */
-	
+
 	$(document).on('ready', function() {
 		enableMasonry();
 	});
-	
-	
+
+
 /* ==========================================================================
    When document is Scrollig, do
    ========================================================================== */
-	
+
 	$(window).on('scroll', function() {
 		headerStyle();
 		factCounter();
 	});
-	
+
 /* ==========================================================================
    When document is loading, do
    ========================================================================== */
-	
+
 	$(window).on('load', function() {
 		handlePreloader();
 		enableMasonry();
 	});
 
-	
+
 
 })(window.jQuery);
